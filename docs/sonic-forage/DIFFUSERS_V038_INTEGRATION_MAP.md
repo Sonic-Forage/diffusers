@@ -7,7 +7,7 @@ Release tag: `v0.38.0` / commit `275869dcae4ebcfee6a80253fdabc56033335020`
 
 ## What v0.38.0 adds that matters for Sonic-Forage / MindForge
 
-### 1. ACE-Step 1.5 — highest-value audio/music target
+### 1. ACE-Step 1.5 - highest-value audio/music target
 
 - Diffusers files: `src/diffusers/pipelines/ace_step/pipeline_ace_step.py`, `src/diffusers/pipelines/ace_step/modeling_ace_step.py`
 - Model family: `ACE-Step/Ace-Step1.5`
@@ -16,7 +16,7 @@ Release tag: `v0.38.0` / commit `275869dcae4ebcfee6a80253fdabc56033335020`
 - Sonic-Forage use: autonomous radio stingers, scene beds, intro/outro sketches, lyric-conditioned mini songs.
 - Best first path: use Diffusers directly inside a Modal GPU endpoint, then port native vLLM-Omni once prompts/latency/cost are validated.
 
-### 2. LongCat-AudioDiT — second audio target
+### 2. LongCat-AudioDiT - second audio target
 
 - Diffusers files: `src/diffusers/pipelines/longcat_audio_dit/pipeline_longcat_audio_dit.py`
 - Model: `ruixiangma/LongCat-AudioDiT-1B-Diffusers`
@@ -24,28 +24,28 @@ Release tag: `v0.38.0` / commit `275869dcae4ebcfee6a80253fdabc56033335020`
 - Sonic-Forage use: SFX, ambience, transitions, non-vocal radio drops.
 - Best first path: DiffusersAdapter or direct Diffusers endpoint, because audio post-processing may differ from vLLM-Omni's current image/video post processors.
 
-### 3. Flux.2 Klein Inpaint + Flux.2 small decoder — practical visual tool
+### 3. Flux.2 Klein Inpaint + Flux.2 small decoder - practical visual tool
 
 - Diffusers file: `src/diffusers/pipelines/flux2/pipeline_flux2_klein_inpaint.py`
 - Also relevant: `black-forest-labs/FLUX.2-small-decoder` for faster Flux.2 decode.
 - Sonic-Forage use: fast image cleanup/inpainting for posters, album art, thumbnails, character cards, QR proof props.
 - vLLM-Omni status: local fork already has `Flux2KleinPipeline` and `Flux2Pipeline`; missing/next item is native `Flux2KleinInpaintPipeline` parity and small-decoder toggles.
 
-### 4. Ernie-Image and Nucleus-MoE — new image generation lanes
+### 4. Ernie-Image and Nucleus-MoE - new image generation lanes
 
 - Ernie file: `src/diffusers/pipelines/ernie_image/pipeline_ernie_image.py`
 - Nucleus file: `src/diffusers/pipelines/nucleusmoe_image/pipeline_nucleusmoe_image.py`
 - Sonic-Forage use: comparison bakeoff against Flux/Qwen/GLM for poster art and stylized scene cards.
 - vLLM-Omni status: local vLLM-Omni fork already registers `ErnieImagePipeline`; `NucleusMoEImagePipeline` appears not yet native and is a clean adapter candidate.
 
-### 5. LTX-2 and HunyuanVideo 1.5 modular pipelines — video research lane
+### 5. LTX-2 and HunyuanVideo 1.5 modular pipelines - video research lane
 
 - LTX files: `src/diffusers/pipelines/ltx2/`
 - Hunyuan files: `src/diffusers/pipelines/hunyuan_video1_5/`
 - Sonic-Forage use: short-loop video beds, idents, show bumpers, image-to-video animation of generated art.
 - vLLM-Omni status: local vLLM-Omni fork already registers `LTX2*`, `LTX23*`, `HunyuanVideo15Pipeline`, and `HunyuanVideo15ImageToVideoPipeline`, so this is closer to production than the audio additions.
 
-### 6. LLaDA2 — weird/cool text diffusion lane
+### 6. LLaDA2 - weird/cool text diffusion lane
 
 - Diffusers file: `src/diffusers/pipelines/llada2/pipeline_llada2.py`
 - Modality: discrete diffusion language modeling with iterative unmasking.
